@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Way Data Binding</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="vue-app">
+    <!--? this is the example of two way data binding and how we do that -->
+    <div class="input-fields">
+      <label>Enter Your First Name: </label>
+      <input type="text" v-model="firstName">
+    </div>
+
+    <div class="input-fields">
+      <label>Enter Your Last Name: </label>
+      <input type="text" v-model="lastName">
+    </div>
+
+    <div class="input-fields">
+      <label>Enter Your Age: </label>
+      <input type="number" v-model="age">
+    </div>
+    <h3>Your full name is: {{firstName}}  {{lastName}}</h3>
+    <h3>Your age is: {{age}}</h3>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

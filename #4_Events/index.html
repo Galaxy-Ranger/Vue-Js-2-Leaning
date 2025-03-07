@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="vue-app">
+    <h1>Your age is: {{age}}</h1>
+    <!-- <button v-on:click="age++">Add a Year</button> --> <!--! this is the bad practice to do -->
+
+    <!--* this is the single click event -->
+    <button v-on:click="add(1)">Click to Add a Year</button>
+
+    <!--? Shorthand to use v-on:cick="" as @click="" -->
+    <button @click="subtract(1)">Click to Subtract a Year</button>
+
+    <!--* Now let's see double click event -->
+    <button @dblclick="add(10)">Double click to Add 10 Year</button>
+    <button @dblclick="subtract(10)">Double click to Subtract 10 Year</button>
+
+    <!--* Now let's see mouseover event -->
+    <div id="canvas" @mousemove="positionXY">{{x}}, {{y}}</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
