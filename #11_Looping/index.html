@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping with v-for</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="vue-app">
+    <h1>Looping with v-for</h1>
+
+    <ul>
+      <!--? v-for="character in characters" is used to loop over an array -->
+      <li v-for="character,index of characters">Index: {{ index}} {{ character }}</li>
+    </ul>
+<!--
+    <ul v-for="ninja,index in ninjas">
+      <!-- ? v-for="ninja in ninjas" is used to loop over an objects --/>
+      </!-- <li v-for="ninja,index in ninjas">Index: {{ index}} Name: {{ ninja.name }} Age: {{ ninja.age }}</li> --/>
+      <li>Index: {{ index }}</li>
+      <li>Name: {{ ninja.name }}</li>
+      <li>Age: {{ ninja.age }}</li>
+    </ul>
+-->
+    <!-- above code has one problem that is every time loop run whole ul tag is created and their li tags -->
+    <!-- but what i want is all the li tags comes under single ul tag for this -->
+    <ul>
+      <template v-for="ninja,index of ninjas">
+        <li>Index: {{ index }}</li>
+        <li>Name: {{ ninja.name }}</li>
+        <li>Age: {{ ninja.age }}</li>
+      </template>
+    </ul>
+
+    <!--? another way to iterate over ninjas array of objects. -->
+    <template v-for="ninja,index of ninjas">
+      <ul>
+        <li>Index: {{ index }}</li>
+        <template v-for="key,value in ninja">
+          <li>{{ key }}: {{ value }}</li>
+        </template>
+      </ul>
+    </template>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

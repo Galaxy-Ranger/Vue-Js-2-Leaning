@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computed Properties</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="vue-app">
+    <button @click="a++">Add to A</button>
+    <button @click="b++">Add to B</button>
+    <p>A: {{a}}</p>
+    <p>B: {{b}}</p>
+
+    <!--! If u want to know what happen when we use method instead of computed run this code -->
+    <!-- <p>Age + A: {{addToA()}}</p>
+    <p>Age + B: {{addToB()}}</p> -->
+
+    <p>Age + A: {{addToA}}</p>
+    <p>Age + B: {{addToB}}</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

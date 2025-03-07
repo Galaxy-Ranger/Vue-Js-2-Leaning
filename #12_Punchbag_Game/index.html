@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punchbag Game</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="vue-app">
+    <!-- bag image -->
+    <div id="bag">
+      <img v-if="bagHealth != 0" src="./img/bag.png" alt="bag-image">
+      <img v-else src="./img/bag-burst.png" alt="bag-image">
+    </div>
+
+    <!-- bag health -->
+    <div id="bag-health">
+      <p>Bag Health: {{ bagHealth }}%</p>
+      <progress v-if="bagHealth != 0" :value="bagHealth" max="100" id="health"></progress>
+      <p v-else>Game Over</p>
+    </div>
+
+    <!-- game controls -->
+    <div id="game-controls">
+      <button @click="punch()" v-show="!ended">Punch</button>
+      <button @click="restart()">Restart</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

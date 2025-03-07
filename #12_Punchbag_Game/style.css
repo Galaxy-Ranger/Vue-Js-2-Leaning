@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bag {
+  display: flex;
+  justify-content: center;
+}
+
+#bag img {
+  width: 180px;
+  height: 500px;
+}
+
+#bag-health {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 15px 0px;
+}
+
+#bag-health > p {
+  padding: 10px 0px;
+  margin: 0px 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#health {
+  font-size: 20px;
+  padding: 20px;
+}
+
+#game-controls {
+  display: flex;
+  justify-content: center;
+}
+
+#game-controls button {
+  color: yellow;
+  background-color: #999;
+  font-size: 30px;
+  margin: 0px 10px;
+  padding: 10px 15px;
+}
+
+#game-controls button:hover {
+  background-color: #666;
+}
