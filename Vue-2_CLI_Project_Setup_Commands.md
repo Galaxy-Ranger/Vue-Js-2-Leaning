@@ -56,3 +56,24 @@ You can install it via yarn or NPM.
 ## CDN
 
 > \<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.3">\</script>
+
+## vue-routing
+
+Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze.
+
+## Installation
+
+You can install it via yarn or NPM.
+
+> yarn add vue-router@4
+> npm install vue-router@4
+
+The problem is you have incompatible versions of vue and vue-router.
+
+- vue@2 requires vue-router@3
+- vue@3 requires vue-router@4
+
+
+## CDN
+
+> https://unpkg.com/vue-router@4
