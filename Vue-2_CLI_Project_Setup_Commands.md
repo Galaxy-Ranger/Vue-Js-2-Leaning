@@ -41,3 +41,18 @@ Example:
 *build for production with minification*
 
 > npm run build
+
+## vue-resource
+
+The plugin for Vue.js provides services for making web requests and handle responses using a XMLHttpRequest or JSONP.
+
+## Installation
+
+You can install it via yarn or NPM.
+
+> yarn add vue-resource
+> npm install vue-resource
+
+## CDN
+
+> \<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.3">\</script>
