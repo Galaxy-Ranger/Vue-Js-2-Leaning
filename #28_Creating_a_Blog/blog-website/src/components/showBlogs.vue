@@ -1,13 +1,13 @@
 <!-- #33_GET Requests -->
 
 <template>
-  <div id="show-blogs">
+  <div v-theme:column="'narrow'" id="show-blogs">
     <h1>All Blog Articles</h1>
     <div v-for="blog of blogs" class="single-blog">
-      <h2>Blog Title</h2>
-      <p>{{ blog.title }}</p>
-      <article>Blog Content:</article>
-      <p>{{ blog.body }}</p>
+      <p>Blog Title</p>
+      <h2 v-rainbow>{{ blog.title }}</h2>
+      <p>Blog Content:</p>
+      <article>{{ blog.body }}</article>
     </div>
   </div>
 </template>
